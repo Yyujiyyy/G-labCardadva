@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 
 [CreateAssetMenu(menuName = "UniqueEffects/CompasetotyAttack")]
-public class CompasetotyEffect : UniqueEffect
+public class CompasetotyAttack : UniqueEffect
 {
     [SerializeField][Tooltip("代償N")] private float N;
     
