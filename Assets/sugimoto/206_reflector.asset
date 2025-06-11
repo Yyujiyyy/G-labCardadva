@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 206_reflector
   m_EditorClassIdentifier: 
   displayName: "\u30EA\u30D5\u30EC\u30AF\u30BF\u30FC"
-  cardName: 
+  cardName: reflector
   synthesisType: 1
   id: 206
   icon: {fileID: 0}
@@ -24,5 +24,5 @@ MonoBehaviour:
     magic_Status: 0
     defense_Status: 0
     heal_Status: 0
-  uniqueEffect: {fileID: 0}
+  uniqueEffect: {fileID: 11400000, guid: 438012855bf713848819cf21d3d3fc65, type: 2}
   flontBuff: []

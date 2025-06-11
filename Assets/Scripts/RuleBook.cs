@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class RuleBook : MonoBehaviour
 {
     [SerializeField] Text message;
     [SerializeField] float pluseffect;
+    [SerializeField] public reflectorEffect reflector;
+
 
 
 
@@ -170,9 +173,15 @@ public class RuleBook : MonoBehaviour
             Hit = 2 * Hit;
         }
         Hit = (int)(Hit * Decrease);
-        player.Life -= Hit;
-        message.text = $"{Hit}ダメージをうけた";
-
+        if (reflector.isreflector)
+        {
+            reflector.reflectorAttak(player, enemy, message, Hit);
+        }
+        else
+        {
+            player.Life -= Hit;
+            message.text = $"{Hit}ダメージをうけた";
+        }
     }
 
     //敵の状態表示
